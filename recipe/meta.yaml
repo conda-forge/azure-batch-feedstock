@@ -1,5 +1,5 @@
 {% set name = "azure-batch" %}
-{% set version = "12.0.0" %}
+{% set version = "13.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-batch-{{ version }}.zip
-  sha256: 1a9b1e178984a7bf495af67bcce51f0db1e4a8a957afb29e33554a14a9674deb
+  sha256: e9295de70404d276eda0dd2253d76397439abe5d8f18c1fca199c49b8d6ae30a
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.4
+    - python >=3.6
     - pip
   run:
-    - python >=3.4
-    - azure-common >=1.1,<2.0
-    - msrest >=0.6.21
+    - python >=3.6
     - msrestazure >=0.4.32,<2.0.0
+    - azure-common >=1.1,<2.dev0
 
 test:
   imports:
