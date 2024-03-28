@@ -1,5 +1,5 @@
 {% set name = "azure-batch" %}
-{% set version = "14.1.0" %}
+{% set version = "14.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/azure-batch-{{ version }}.tar.gz
-  sha256: 9616b2caa629c7400122d685d557ebcd01797da9889908318f9a547484397acd
+  sha256: c79267d6c3d3fe14a16a422ab5bbfabcbd68ed0b58b6bbcdfa0c8345c4c78532
 
 build:
   noarch: python
