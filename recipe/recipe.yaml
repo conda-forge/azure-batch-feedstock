@@ -2,18 +2,18 @@ schema_version: 1
 
 context:
   name: azure-batch
-  version: 14.2.0
+  version: 15.0.0b2
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/azure-batch-${{ version }}.tar.gz
-  sha256: c79267d6c3d3fe14a16a422ab5bbfabcbd68ed0b58b6bbcdfa0c8345c4c78532
+  url: https://files.pythonhosted.org/packages/30/f5/8eb6c79cfc5df4081fdd11cc7c731ab0a7cfb196a6af07a83453b5b3ce43/azure_batch-${{ version }}.tar.gz
+  sha256: 624ca3811a8205b3deab243998e139409bebf7f1ef4abe9e76cf3b1a7d1038fd
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -24,14 +24,14 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - msrestazure >=0.4.32,<2.0.0
-    - azure-common >=1.1,<2.dev0
+    - isodate >=0.6.1
+    - azure-core >=1.30.0
+    - typing-extensions >=4.6.0
 
 tests:
   - python:
       imports:
         - azure.batch
-        - azure.batch.custom
       python_version: ${{ python_min }}.*
   - requirements:
       run:
