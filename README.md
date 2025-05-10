@@ -36,14 +36,14 @@ Current release info
 Installing azure-batch
 ======================
 
-Installing `azure-batch` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `azure-batch` from the `conda-forge/label/azure-batch_rc` channel can be achieved by adding `conda-forge/label/azure-batch_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/azure-batch_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `azure-batch` can be installed with `conda`:
+Once the `conda-forge/label/azure-batch_rc` channel has been enabled, `azure-batch` can be installed with `conda`:
 
 ```
 conda install azure-batch
@@ -58,26 +58,26 @@ mamba install azure-batch
 It is possible to list all of the versions of `azure-batch` available on your platform with `conda`:
 
 ```
-conda search azure-batch --channel conda-forge
+conda search azure-batch --channel conda-forge/label/azure-batch_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search azure-batch --channel conda-forge
+mamba search azure-batch --channel conda-forge/label/azure-batch_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search azure-batch --channel conda-forge
+mamba repoquery search azure-batch --channel conda-forge/label/azure-batch_rc
 
 # List packages depending on `azure-batch`:
-mamba repoquery whoneeds azure-batch --channel conda-forge
+mamba repoquery whoneeds azure-batch --channel conda-forge/label/azure-batch_rc
 
 # List dependencies of `azure-batch`:
-mamba repoquery depends azure-batch --channel conda-forge
+mamba repoquery depends azure-batch --channel conda-forge/label/azure-batch_rc
 ```
 
 
@@ -147,5 +147,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@janjagusch](https://github.com/janjagusch/)
 * [@xylar](https://github.com/xylar/)
 
